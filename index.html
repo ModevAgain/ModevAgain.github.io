@@ -117,8 +117,26 @@
                                             </figcaption>
                                         </figure>
                                     </div>
-                                   
-                                    
+                                    <div class="grid-item">
+                                        <figure class="effect-sadie">
+                                            <img src="img/Vector_1.jpg" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Vector vCharM Showcase</h2>
+                                                <p class="tm-figure-description">Industry Event Application</p>
+                                                <a class="popup" href="site-assets/ajax/vector.html" >View more</a>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="grid-item">
+                                        <figure class="effect-sadie">
+                                            <img src="img/ZeroWaste_1.jpg" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Fraunhofer ZeroWaste</h2>
+                                                <p class="tm-figure-description">Industry Event Application</p>
+                                                <a class="popup" href="site-assets/ajax/zerowaste.html" >View more</a>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
                                                                           
                                 </div>                                 
                             </div>
@@ -236,6 +254,13 @@
                     type: 'ajax',
                     //alignTop: true,
                     //overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+                    callback: {
+                        parseAjax: function(mfpResponse) 
+                        {
+                            var popupActive = mfpResponse.data;
+                            popupActive = true;
+                        }
+                    }
                 });
             });
 

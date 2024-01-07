@@ -9,3 +9,44 @@
     font-size: small;
     font-weight: normal;
 }
+
+#fade {  
+width: 100%;
+max-width: 600px;
+}
+
+.bottom {
+position: absolute;
+width: 100%;
+max-width: 600px;
+margin: 20px auto;
+}
+	
+.top {
+position: relative;
+width: 100%;
+max-width: 600px;
+margin: 20px auto;
+}
+
+#fade img {
+-webkit-transition: opacity 1s ease-in-out;
+-moz-transition: opacity 1s ease-in-out;
+-o-transition: opacity 1s ease-in-out;
+transition: opacity 1s ease-in-out;
+}
+
+@keyframes FadeInOut {
+0% {opacity:1;}
+45% {opacity:1;}
+55% {opacity:0;}
+100% {opacity:0;}
+}
+
+#fade img.top {
+animation-name: FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 8s;
+animation-direction: alternate;
+}
