@@ -19,13 +19,13 @@ html.gray #loader-wrapper {
 body {
 	background-color: #DDDDDD;
 	color: black;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-size: 17px;
 	font-weight: 300;
 	overflow-x: hidden;
 }
 
-ul { padding: 0; margin: 0; }
+ul { padding: 0; margin: 0; top:50px}
 figure { margin: 0; }
 p:last-child { margin-bottom: 0; }
 a { color: #3f97c9; }
@@ -104,10 +104,13 @@ a:focus {
 
 button:focus { outline: none; }
 
+.subtitle {font-size: 1.5rem;}
+.subtitle_2 {font-size: 1.0rem;}
+
 .cd-slider-nav a.navbar-brand {
-	font-size: 2.0rem;
+	font-size: 2.5rem;
 	color: white;
-	padding-top: 0;
+	padding-top: 20px;
 	padding-bottom: 0;
 	display: -ms-flexbox;
 	display: flex;
@@ -115,10 +118,11 @@ button:focus { outline: none; }
 	    align-items: center;
 	-ms-flex-pack: center;
 	    justify-content: center;
-	width: auto;
+	width: 100%;
+	flex-direction: column;
 }
 
-.cd-slider-nav a { text-transform: lowercase; }
+.cd-slider-nav a { text-transform: none; }
 .navbar-nav .nav-item { float: none; }
 .navbar-nav .nav-item+.nav-item { margin-left: 0; }
 
@@ -330,7 +334,7 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 .cd-slider-nav .navbar-nav { background-color: rgba(255,255,255,0.7); }
 
 .cd-slider-nav a, 
-.navbar-nav .nav-link { height: 50px; }
+.navbar-nav .nav-link { height: 100%; }
 
 .cd-hero-slider .cd-full-width { padding-top: 50px; }
 
@@ -498,6 +502,8 @@ figure.effect-sadie:hover p {
     max-width: 100%;
     opacity: 0.8;
 }
+
+
 
 .cd-hero-slider h2 { font-size: 1.5em; }
 .cd-hero-slider p.tm-figure-description { font-size: 1.2rem; }
@@ -669,11 +675,12 @@ figure.effect-sadie:hover p {
 	.navbar-nav .nav-link {
 		font-size: 1.2em;
 		width: 160px;
-		height: 110px;
+		height: 100%;
 	}
 	.cd-hero-slider .cd-full-width { padding-top: 110px; }
 	.cd-slider-nav a.navbar-brand { font-size: 3.5rem; }
-
+	.subtitle {font-size: 2.0rem;}
+	.subtitle_2 {font-size: 1.5rem;}
 	.cd-full-width .container-fluid {
 		padding-left: 0;
 		padding-right: 0;

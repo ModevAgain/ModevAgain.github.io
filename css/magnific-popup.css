@@ -8,7 +8,18 @@
   overflow: hidden;
   position: fixed;
   background: #0b0b0b;
-  opacity: 0.8; }
+  opacity: 0;
+  animation: 0.3s ease-out 0s 1 fadeAnimationBG both;
+  }
+
+  @keyframes fadeAnimationBG {
+    10% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.9;
+    }
+    }
 
 .mfp-wrap {
   top: 0;
@@ -18,7 +29,8 @@
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden; 
+}
 
 .mfp-container {
   text-align: center;
@@ -27,7 +39,19 @@
   height: 100%;
   left: 0;
   top: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  opacity: 0;
+  animation: 0.3s ease-out 0s 1 fadeAnimationContainer both;
+  }
+
+  @keyframes fadeAnimationContainer {
+    10% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
 
 .mfp-container:before {
   content: '';
@@ -83,7 +107,7 @@
   display: none !important; }
 
 .mfp-preloader {
-  color: #CCC;
+
   position: absolute;
   top: 50%;
   width: auto;
@@ -143,7 +167,7 @@ button::-moz-focus-inner {
     top: 1px; }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333; }
+  color: #ffffff; }
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
