@@ -18,9 +18,9 @@
 <div class="cd-hero-slider" style="background-color: rgba(0, 0, 0, 0.6);">
 <div class="tm-figure-description"style="max-width:600px; margin: 20px auto;">
     <p></p>
-    <div id="fade">
-        <img class="bottom" src="img/Vector_1.jpg" />
-        <img class="top" src="img/Vector_2.jpg" />
+    <div>
+        <img class="fadeImage" src="img/Vector_1.jpg" />
+        <img class="fadeImage " src="img/Vector_2.jpg" />
     </div>
     <p></p>
     <p id="detailHead">Project</p>
@@ -33,3 +33,27 @@
     <p id="detailText">Lead Developer</p>
 </div>
 </div>
+<script>
+    $(document).ready(function(){
+      const slides = document.querySelectorAll('.fadeImage');
+      let currentSlide = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if(index == i)
+            slide.classList.add("fade");
+          else if(slide.classList.contains("fade"))
+            slide.classList.remove("fade");
+        });
+      }
+  
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+       
+      }
+ 
+        setInterval(nextSlide, 3000);
+        showSlide(0);
+    });
+  </script>
