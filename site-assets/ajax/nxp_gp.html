@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta>
+<!-- load stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">  
+<!-- Google web font "Open Sans" -->
+<link rel="stylesheet" href="Font-Awesome-4.7/css/font-awesome.min.css">                
+<!-- Font Awesome -->
+<link rel="stylesheet" href="css/bootstrap.min.css">                                      
+<!-- Bootstrap style -->
+<link rel="stylesheet" href="css/hero-slider-style.css">                              
+<!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
+<link rel="stylesheet" href="css/magnific-popup.css">                                 
+<!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
+<link rel="stylesheet" href="css/templatemo-style.css">    
+<link rel="stylesheet" href="site-assets/ajax/css/custom.css">                                  
+
+</meta>
+<div class="cd-hero-slider">
+<div class="tm-figure-description scaleIn"style="max-width:600px; margin: 20px auto;">
+    <p></p>
+    <div class="fadeContainer">
+        <img class="fadeImage" src="img/NXP_GreenPower_2.jpg" />
+        <img class="fadeImage" src="img/NXP_GreenPower_3.jpg" />
+        <img class="fadeImage" src="img/NXP_GreenPower_4.jpg" />
+        <img class="fadeImage" src="img/NXP_GreenPower_5.jpg" />
+    </div>
+    <p></p>
+    <p id="detailHead">Project</p>
+    <p id="detailText">NXP Green IoT & Smart Power<br>(CES 2022)<br>by FRIDIE, Solid Sense for NXP</p>
+    <p id="detailHead">Description</p>
+    <p id="detailText">Industry Event Application for CES 2022<br>Showcasing green IoT tech by using plant and soil generated power as well as other low power use cases in smartwatches.<br>Multiscreen applications with touch input and UDP listeners for IoT data inputs.</p>
+    <p id="detailHead">Tech</p>
+    <p id="detailText">Unity, C#, UDP</p>
+    <p id="detailHead">Roles</p>
+    <p id="detailText">Lead Developer</p>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      const slides = document.querySelectorAll('.fadeImage');
+      let currentSlide = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if(index == i)
+            slide.classList.add("fade");
+          else if(slide.classList.contains("fade"))
+            slide.classList.remove("fade");
+        });
+      }
+  
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+       
+      }
+ 
+        setInterval(nextSlide, 3000);
+        showSlide(0);
+    });
+</script>
