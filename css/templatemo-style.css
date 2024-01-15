@@ -25,7 +25,7 @@ body {
 	overflow-x: hidden;
 }
 
-ul { padding: 0; margin: 0; top:50px}
+ul { padding: 0; margin: 0; top:100px}
 figure { margin: 0; }
 p:last-child { margin-bottom: 0; }
 a { color: #3f97c9; }
@@ -620,10 +620,7 @@ figure.effect-sadie:hover p {
 		height: auto;
 	}
 
-	.cd-slider-nav a, 
-	.navbar-nav .nav-link {
-		height: 80px;
-	}
+
 
 	.cd-hero-slider .cd-full-width { padding-top: 80px; }
 
