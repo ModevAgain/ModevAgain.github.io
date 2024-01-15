@@ -1,5 +1,5 @@
 #detailHead {
-	text-align: center; 
+	text-align: left; 
 	font-weight: bold; 
 	font-size: normal;
 	margin-bottom: .1rem;
@@ -9,7 +9,7 @@
 }
 
 #detailText {
-	text-align: center; 
+	text-align: left; 
     font-size: small;
     font-weight: normal;
 	/* opacity: 0;
